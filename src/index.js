@@ -22,7 +22,7 @@ class App extends Component {
   handleSubmit(event) {
     event.preventDefault();
     const API_KEY = '16e3cd6a7895f8a3af982d195712ff48';
-    const ROOT_URL = `http://api.openweathermap.org/data/2.5/weather?appid=${API_KEY}`;
+    const ROOT_URL = `https://api.openweathermap.org/data/2.5/weather?appid=${API_KEY}`;
     const city = this.state.term;
     const url = `${ROOT_URL}&q=${city}`;
     axios.get(url)
