@@ -1,0 +1,50 @@
+body {
+  height: 100vh;
+  background: #BBDEFB;
+}
+#root { padding-top: 15px;}
+#root,
+.container {
+  height: 100%;
+}
+
+.city-form {
+  margin-top: 15px;
+}
+
+.weather-info-list {
+  margin-bottom: 20px;
+  font-size: 20px;
+  font-family: 'Roboto', sans-serif;
+  display: inline-block;
+  padding: 10px 20px;
+  background: rgba(255,255,255,0.5);
+  border-radius: 5px;
+  box-shadow: -2px 2px 5px 2px;
+}
+
+.weather-info-list .flex-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 0;
+}
+
+.flex-icon span {
+  padding-left: 10px;
+}
+
+.google-map--wrapper {
+  height: 60vh;
+  padding-left: 0!important;
+  padding-right: 0!important;
+  box-shadow: 0 0 2px 1px;
+}
+.google-map--wrapper div:first-of-type {
+  height: 100%;
+}
+
+i {
+  font-size: 40px;
+  color: #924da3;
+}
