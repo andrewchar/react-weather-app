@@ -1,21 +1,16 @@
 import React, { Component } from 'react';
+
 const google = window.google;
 
 class GoogleMap extends Component {
   constructor() {
-    super()
+    super();
     this.updateMap = this.updateMap.bind(this);
   }
 
-  updateMap() {
-    return (
-      new google.maps.Map(this.refs.map, {
-        zoom: 12,
-        center: {
-          lat: this.props.lat, lng: this.props.lon
-        }
-      })
-    )
+  // init the map on city search
+  componentDidMount() {
+    this.updateMap();
   }
 
   // update the map position on new city search
@@ -27,13 +22,19 @@ class GoogleMap extends Component {
     }
   }
 
-  //init the map on city search
-  componentDidMount() {
-    this.updateMap();
+  updateMap() {
+    return (
+      new google.maps.Map(this.GoogleMapNode, {
+        zoom: 12,
+        center: {
+          lat: this.props.lat, lng: this.props.lon
+        }
+      })
+    );
   }
 
   render() {
-    return <div ref="map" />;
+    return <div ref={(n) => { this.GoogleMapNode = n; }} />;
   }
 }
 

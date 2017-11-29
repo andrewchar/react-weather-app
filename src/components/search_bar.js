@@ -9,14 +9,12 @@ const SearchBar = (props) => {
             placeholder="Search your city!"
             className="form-control"
             value={props.term}
-            onChange={props.onInputChange}></input>
-          {/* <button
-            type="submit"
-            className="btn btn-default">Search</button> */}
+            onChange={props.onInputChange}
+          />
         </form>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default SearchBar
+export default SearchBar;

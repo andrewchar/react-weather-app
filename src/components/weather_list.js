@@ -1,6 +1,6 @@
 import React from 'react';
-import GoogleMap from './google_map'
-import WeatherListItem from './weather_list_item'
+import GoogleMap from './google_map';
+import WeatherListItem from './weather_list_item';
 
 const WeatherList = (props) => {
   if (props.searchError !== '') {
@@ -17,14 +17,13 @@ const WeatherList = (props) => {
   return (
     <div className="col-sm-12">
       <div className="col-sm-12 text-center">
-      <WeatherListItem weather={temp} searchError={props.searchError} />
+        <WeatherListItem weather={temp} searchError={props.searchError} />
       </div>
       <div className="google-map--wrapper col-sm-12">
         <GoogleMap lat={lat} lon={lon} />
       </div>
     </div>
-  )
-
-}
+  );
+};
 
 export default WeatherList;
